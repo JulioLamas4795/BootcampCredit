@@ -11,4 +11,5 @@ public class ClientDTO {
     private String name;
     private String code;
     private String clientIdNumber;
+
 }
