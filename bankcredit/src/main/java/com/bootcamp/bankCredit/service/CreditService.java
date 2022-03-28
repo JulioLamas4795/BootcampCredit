@@ -6,15 +6,27 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 
-public interface CreditService extends CrudService<Credit,String>{
+public interface CreditService{
 
 
     Mono<Credit> findByContractNumber(String contractNumber);
 
-    Mono<Client> getClient(String clientIdNumber);
 
-    Flux<Credit> findAllByClientIdNumber(String clientIdNumber);
+
+
+    Flux<Credit> findByClientIdNumber(String clientIdNumber);
 
     Mono<Credit> validateClientIdNumber(String clientIdNumber);
+
+    Mono<Credit> create(Credit obj);
+
+    Flux<Credit> findAll();
+
+    Mono<Credit> findById(String id);
+
+    Mono<Credit> update(Credit obj);
+
+    Mono<Void> deleteByIdCredit(String id);
+
 
 }

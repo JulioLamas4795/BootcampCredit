@@ -16,14 +16,6 @@ import static com.bootcamp.bankCredit.utils.Constants.API_CLIENT_URL;
 @SpringBootApplication
 public class BankCreditApplication {
 
-	@Bean
-	public WebClient webClient(WebClient.Builder builder){
-		return builder
-				.baseUrl(API_CLIENT_URL)
-				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-				.build();
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(BankCreditApplication.class, args);
 	}
